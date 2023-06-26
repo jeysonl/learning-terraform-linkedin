@@ -71,13 +71,7 @@ module "blog_alb" {
       name_prefix      = "blog-"
       backend_protocol = "HTTP"
       backend_port     = 80
-      target_type      = "instance"
-      targets = {
-        my_target = {
-          target_id = aws_instance.blog.id
-          port = 80
-        }        
-      }
+      target_type      = "instance"      
     }
   ]
 
